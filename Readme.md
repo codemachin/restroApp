@@ -3,6 +3,11 @@
 Design RESTful service end points for a restaurant table reservation system. 
 Your API's should support following functional requirements
 
+## Usage
+1. After adding the table we have to click on save for the table to actually get added.
+2. In the date picker , selecting date like 26-01-2017 means upto 26th 00:00 hrs.
+3. To be able to get the range of whole day , select suppose 24th to 27th to get all bookings from 24th to the whole day of 26th.
+
 Restuarants: 
 1. Onboarding new restuarants 
 2. Adding/Removing restuarants 
