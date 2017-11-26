@@ -1,0 +1,107 @@
+<div class="cover">
+	<div class="container">
+			<div ng-include="'views/nav.html'"></div>
+	        <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="search" placeholder="Search" style="margin-top: 20px;">
+
+		        <div class="card" ng-repeat="restaurant in cust.restaurants| filter:search" style="margin : 20px 0;">
+		            <div class="card-header">
+		              <h6 class="card-title">
+		                  Restaurant Name ~&nbsp;{{restaurant.name}}
+		                </h6>
+		            </div>
+		                  
+		            <div class="card-body">
+		              
+		              <div class="card-text">
+		                <div>
+		                  <div class="row">
+		                  	<div class="col-6">
+		                  		  Cuisine ~ {{restaurant.cuisine}}<br>
+				                  Address ~ {{restaurant.address}}<br><br>
+
+				                 <input class="form-control" id="from" type="text" placeholder="search by capacity" ng-model="search1.capacity" >
+
+				                  <table ng-if="restaurant.tables.length>0" class="table table-bordered table-striped table-hover table-condensed ">
+						              <tbody>
+						                <tr>
+						                  <th>
+						                    Table No
+						                  </th>
+						                  <th>
+						                    Capacity
+						                  </th>
+						                  <th>
+						                    Reserve
+						                  </th>
+						              
+						                </tr>
+						                <tr ng-repeat="table in restaurant.tables | filter: search1">
+						                  <td>
+						                    {{table.tableNo}}
+						                  </td>
+						                  <td>
+						                    {{table.capacity}}
+						                  </td>
+						                  <td>
+						                    <a href="" ng-if= "!table.booked" ng-click="cust.toggle(restaurant,table._id,$index,table.booked)">Book now!</a>
+						                    <a href="" ng-if= "table.booked" ng-click="cust.toggle(restaurant,table._id,$index,table.booked)">cancel booking</a>
+						                  </td>
+						                  
+						                </tr>
+						              </tbody>
+						            </table>
+						    </div>
+
+						    <div class="col-6"  ng-if="restaurant.review.length>0">
+						    	<table class="table table-bordered table-striped table-hover table-condensed ">
+						              <tbody>
+						                <tr>
+						                  <th>
+						                    Name
+						                  </th>
+						                  <th>
+						                    Review
+						                  </th>
+						                  
+						              
+						                </tr>
+						                <tr ng-repeat="revie in restaurant.review | limitTo :5">
+						                  <td>
+						                    {{revie.name}}
+						                  </td>
+						                  <td>
+						                    {{revie.review}}
+						                  </td>
+						                 
+						                  
+						                </tr>
+						              </tbody>
+						            </table>
+						    </div>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="card-footer">
+		            	<div >
+		            		<div class="row">
+		            			<div class="col-1">
+	   								<a href="" style="color:green;" ng-click="cust.reviewDo($index,restaurant._id)"><h6>Save Review</h6></a>
+				              		<!-- <a href="" style="color:blue;"><h6>Save Review</h6></a> -->
+				              	</div>
+				              	<div class="col-3">
+									<input class="form-control" id="from" type="text" placeholder="enter name" ng-model="cust.name" >
+								</div>
+								<div class="col-8">
+							  		<input class="form-control" id="from" type="text" placeholder="enter review" ng-model="cust.review" >
+							  	</div>
+		              
+
+				            </div>
+
+				        </div>
+
+			      </div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,177 @@
+
+
+
+/*login page cover*/
+.cover{
+  height: 100vh;  
+
+  position: relative;
+  display: table;
+  width: 100%;
+}
+
+.cover:after {
+  content: '';
+  z-index: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.65);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.tagline {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  margin: 45px 0 75px 0;
+  color: #fff;
+}
+
+.cover h1{
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 62px;
+}
+
+.cover .container {
+  position: relative;
+  z-index: 1;
+  text-align: left !important;
+  display: table-cell;
+  width: 100%;
+  overflow-x:hidden;
+}
+
+.cover a {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+
+}
+
+.hero-brand :hover, .hero-brand:visited, .hero-brand:link, .hero-brand:active
+{
+    text-decoration: none;
+    color: white;
+}
+
+/* ==================================================
+  Elements
+  ================================================== */
+
+
+.hero-brand {
+  margin-bottom: 75px;
+  display: inline-block;
+  color: white;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 65px;
+}
+
+.hero-brand:hover {
+  opacity: .75;
+}
+
+#ul {
+  text-decoration: none;
+  border-bottom: 2px solid white;
+}​
+
+.footmar{
+  margin-top: 20px;
+  color:white;
+  padding-bottom: 20px;
+  word-wrap: break-word;
+}
+
+
+@media (max-width: 800px) {
+  .hero-brand{
+    font-size: 40px;
+  }
+  .tagline {
+    font-size: 20px;
+  }
+  .cover h1{
+    font-size: 40px;
+  }
+  .hero-brand img{
+    max-width: 41px;
+  }
+}
+
+@media (max-width: 442px) {
+  
+  .blk{
+    margin-left: 20px;
+  }
+  
+}
+
+@media (max-width: 341px) {
+  .hero-brand{
+    font-size: 30px;
+  }
+  .hero-brand img{
+    max-width: 30px;
+  }
+}
+
+
+
+
+
+html {
+  position: relative;
+  min-height: 100%; 
+  overflow-y: scroll !important;
+}
+
+@media (min-width: 1024px) {
+  .fluid .container-fluid{
+    padding: 0 13%;
+  }
+}
+
+
+/*background css*/
+.bgCustom{
+  background-image: url('../img/2.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+}
+
+
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
+}
+
+
+.card-login {
+  max-width: 25rem; }
+
+.card-register {
+  max-width: 40rem; }
+
+
+/*custom loding screen*/
+.loader {
+    background: #000;
+    background: radial-gradient(#222, #000);
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+}
